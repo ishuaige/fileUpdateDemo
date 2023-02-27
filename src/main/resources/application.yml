@@ -1,0 +1,19 @@
+server:
+  port: 8070
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-guangzhou.aliyuncs.com
+      keyid: yourAccessKeyId
+      keysecret: yourSecret
+      bucketname: niumazlb
+
+# 指定本地的存储文件夹 注意这里的domain如果你配置了请求前缀例如 /api 这种一定要记得加上变成 /api/f/
+# 当然规则可以自定义，在配置类中配置好转发到本地就行
+file:
+  path: D:\images\
+  domain: http://127.0.0.1:8070/f/
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
